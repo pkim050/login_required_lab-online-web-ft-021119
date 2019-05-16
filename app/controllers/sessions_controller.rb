@@ -10,8 +10,4 @@ class SessionsController < ApplicationController
   def destroy
     session.clear if current_user
   end
-
-  def current_user
-    session[:name] if session.include? :name
-  end
 end
