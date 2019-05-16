@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.clear
+    session.clear unless session[:name].empty? || session[:name].nil?
   end
 
   private
