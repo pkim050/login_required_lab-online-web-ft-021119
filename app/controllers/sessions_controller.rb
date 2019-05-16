@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.clear if curent_user
+    session.clear if current_user
   end
 
   def current_user
