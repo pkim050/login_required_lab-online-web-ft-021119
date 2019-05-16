@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    binding.pry
-    session.clear if current_user
+    #binding.pry
+    session.clear if !current_user.nil?
     redirect_to root_path
   end
 end
