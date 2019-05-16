@@ -9,5 +9,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear if current_user
+    redirect_to '/login'
   end
 end
