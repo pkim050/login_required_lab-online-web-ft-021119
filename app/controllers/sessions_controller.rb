@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :user_id
+  before_action :current_user
 
   def create
 
