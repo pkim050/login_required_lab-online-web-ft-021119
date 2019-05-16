@@ -14,4 +14,10 @@ class SessionsController < ApplicationController
   def destroy
     session.clear unless session[:name].nil? || session[:name].empty?
   end
+
+  private
+
+  def current_user
+    session[:name] if session.include? :name
+  end
 end
