@@ -16,4 +16,5 @@ class SessionsController < ApplicationController
 
   def current_user
     session[:name] = params[:name] unless params[:name].nil? || params[:name].empty?
+  end
 end
