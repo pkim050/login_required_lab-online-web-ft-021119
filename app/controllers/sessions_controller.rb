@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
   def destroy
     binding.pry
-    session.clear if !current_user.nil?
+    session.clear unless session[:name].nil?
     redirect_to '/'
   end
 end
