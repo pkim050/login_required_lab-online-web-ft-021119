@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class SecretsController < ApplicationController
   before_action :user_id
 
   private
