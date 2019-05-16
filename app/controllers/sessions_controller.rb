@@ -11,8 +11,6 @@ class SessionsController < ApplicationController
     session.clear if curent_user
   end
 
-  private
-
   def current_user
     session[:name] if session.include? :name
   end
